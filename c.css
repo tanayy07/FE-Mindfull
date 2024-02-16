@@ -4,7 +4,6 @@ body {
     padding: 0;
     background-color: #f7f9fb;
     color: #333;
-    transition: background-color 0.5s ease;
 }
 
 header, nav, main, footer {
@@ -12,27 +11,38 @@ header, nav, main, footer {
 }
 
 header {
-    text-align: center;
+    text-align: left;
     padding: 20px;
     background-color: #5dbcd2;
     color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.5s ease;
 }
 
 h1, h2 {
     color: #3f4d63;
 }
-
 nav {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: #f7f9fb;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 0 15px;
 }
 
 nav a {
     text-decoration: none;
     color: #3f4d63;
-    margin: 0 15px;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
 }
@@ -46,7 +56,6 @@ main {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
 }
 
 section {
@@ -61,12 +70,11 @@ button {
     color: #fff;
     border: none;
     border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease-in-out;
 }
 
 button:hover {
     background-color: #005769;
-    transform: scale(1.05);
 }
 
 footer {
