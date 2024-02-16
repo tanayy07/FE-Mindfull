@@ -1,90 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mindfull - Your Mindfulness Web App</title>
-    <link rel="stylesheet" href="c.css">
-</head>
-<body>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible"
+		content="IE=edge">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0">
+	<title>
+		Mindfull Me
+	</title>
 
-    <header>
-        <h1>Mindfull</h1>
-        <p>Your Mindfulness Web App</p>
-        
-    </header>
+	<style>
+		/* Styling the Body element 
+		i.e. Color, Font, Alignment */
+		body {
+			background-color: #c3ffe3;
+			font-family: Verdana;
+			text-align: center;
+		}
+		h1{
+			margin-top: 7%;
+		}
 
-    <nav>
-        <div class="menu">
-            <ul>
-              <li>
-                <i class="fa-solid fa-image"></i>
-                <a href="#">Gallery</a>
-              </li>
-              <li>
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                <a href="#">Shortcuts</a>
-              </li>
-              <li>
-                <i class="fa-solid fa-photo-film"></i>
-                <a href="#">Exhibits</a>
-              </li>
-              <li>
-                <i class="fa-solid fa-calendar-days"></i>
-                <a href="#">Events</a>
-              </li>
-              <li>
-                <i class="fa-solid fa-store"></i>
-                <a href="#">Store</a>
-              </li>
-              <li>
-                <i class="fa-solid fa-phone"></i>
-                <a href="#">Contact</a>
-              </li>
-              <li>
-                <i class="fa-regular fa-comments"></i>
-                <a href="#">Feedback</a>
-              </li>
-            </ul>
-          </div>
+		/* Styling the Form (Color, Padding, Shadow) */
+		form {
+			background-color: #fff;
+			max-width: 500px;
+			margin: 50px auto;
+			padding: 30px 20px;
+			box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+		}
+
+		/* Styling form-control Class */
+		.form-control {
+			text-align: left;
+			margin-bottom: 25px;
+		}
+
+		/* Styling form-control Label */
+		.form-control label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		/* Styling form-control input, 
+		select, textarea */
+		.form-control input,
+		.form-control select,
+		.form-control textarea {
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			padding: 10px;
+			display: block;
+			width: 95%;
+		}
+
+		/* Styling form-control Radio 
+		button and Checkbox */
+		.form-control input[type="radio"],
+		.form-control input[type="checkbox"] {
+			display: inline-block;
+			width: auto;
+		}
+
+		/* Styling Button */
+		button {
+			background-color: #05c46b;
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			font-size: 21px;
+			display: block;
+			width: 100%;
+			margin-top: 50px;
+			margin-bottom: 20px;
+		}
+    .question {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    transition: background 0.5s ease-in-out;
   
-          <div class="social_media">
-            <ul>
-              <a href="#"><i class="""></i></i></a>
-              <a href="#"><i class=""></i></a>
-              <a href="#"><i class="f""></i></i></a>
-              <a href="#"><i class=""></i></a>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
 
-    <main>
-        <section id="welcome">
-            <h2>Welcome to Mindfull</h2>
-            <p>Experience mindfulness and find peace in your daily life.</p>
-        </section>
+    .container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.5s ease;
+}
+}
 
-        <section id="features">
-            <h2>Key Features</h2>
-            <ul>
-                <li>Guided Meditation</li>
-                <li>Breathing Exercises</li>
-                <li>Mindfulness Journal</li>
-                <!-- Add more features as needed -->
-            </ul>
-        </section>
+	</style>
+</head>
 
-        <section id="get-started">
-            <h2>Get Started</h2>
-            <p>Begin your mindfulness journey now.</p>
-            <button onclick="startMindfulness()">Start Now</button>
-        </section>
-    </main>
+<body>
+	<h1>Sign Up</h1>
 
-    <footer>
-    </footer>
+	<!-- Create Form -->
+	<form id="form">
 
+		<!-- Details -->
+		<div class="form-control">
+			<label for="name" id="label-name">
+				Name
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="text" id="name"
+				placeholder="Enter your name" />
+		</div>
+
+		<div class="form-control">
+			<label for="email" id="label-email">
+				Email
+			</label>
+
+			<!-- Input Type Email-->
+			<input type="email" id="email"
+				placeholder="Enter your email" />
+		</div>
+
+		<div class="form-control">
+			<label for="age" id="label-age">
+				Mobile
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="text" id="age"
+				placeholder="Enter your number" />
+		</div>
+
+		<div class="form-control">
+			<label for="role" id="label-role">
+				Which age group describes you the best?
+			</label>
+
+			<!-- Dropdown options -->
+			<select name="role" id="role">
+        <option value="student">Select</option>
+				<option value="young">14-18</option>
+				<option value="adult">18-24</option>
+				<option value="adult1">
+					24 above
+				</option>
+				<option value="other">None</option>
+			</select>
+		</div>
+		<!-- Multi-line Text Input Control -->
+		<button type="submit" value="submit">
+			Submit
+		</button>
+	</form>
 </body>
+
 </html>
